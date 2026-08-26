@@ -2,9 +2,13 @@ import os
 import sys
 
 # Ensure bot directory is in python module search path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "bot"))
+bot_dir = os.path.join(os.path.dirname(__file__), "bot")
+if bot_dir not in sys.path:
+    sys.path.insert(0, bot_dir)
 
-from main import app
+import main as bot_module
+
+app = bot_module.app
 
 if __name__ == "__main__":
     import uvicorn
