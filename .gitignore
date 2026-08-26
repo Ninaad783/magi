@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+.env
+
+# Antigravity system logs
+.system_generated/
+*.log
+
+# Windows
+Thumbs.db
+ehthru_test*
+test_groq.py
